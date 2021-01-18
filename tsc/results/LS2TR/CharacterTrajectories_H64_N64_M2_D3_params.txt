@@ -1,0 +1,2 @@
+Trainable: 36128
+Non-trainable: 12
