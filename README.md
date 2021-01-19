@@ -1,5 +1,5 @@
 # Seq2Tens: An efficient representation of sequences by low-rank tensor projections
-This repository contains supplementary code to the paper https://arxiv.org/abs/1906.08215.
+This repository contains supplementary code to the paper https://arxiv.org/abs/2006.07027.
 ***
 ## Disclaimer
 The present code is what was used at the time of submission of the paper, therefore at the moment is not intended to be very user-friendly. A cleaned up and streamlined version of the code with many extra features is in the making and soon will be released, so stay tuned!
