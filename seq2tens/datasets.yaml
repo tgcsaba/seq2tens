@@ -2,7 +2,7 @@ AUSLAN:
   hash: e5ec014d1fe103c671cc266672ed1296
   l_max: 136
   l_min: 45
-  link: https://www.dropbox.com/s/rut5f6hn57nx7c9/AUSLAN.npz?dl=1
+  link: https://www.dropbox.com/scl/fi/86d3n168om1ze7ljfadcc/AUSLAN.npz?rlkey=m4d3shvfpy80so9jv08tw8ci4&dl=1
   n_classes: 95
   n_features: 22
   n_test: 1425
@@ -11,7 +11,7 @@ ArabicDigits:
   hash: 96e850a635a58bf7e30a24be35bcdada
   l_max: 93
   l_min: 4
-  link: https://www.dropbox.com/s/jiyabaayywsde73/ArabicDigits.npz?dl=1
+  link: https://www.dropbox.com/scl/fi/9byncjtmkuhyr1rtbl404/ArabicDigits.npz?rlkey=3ki27nnfglgampyvm701n4iqi&dl=1
   n_classes: 10
   n_features: 13
   n_test: 2200
@@ -20,7 +20,7 @@ CMUsubject16:
   hash: 85c0e1885c5a8096a93c2f87c967975d
   l_max: 580
   l_min: 127
-  link: https://www.dropbox.com/s/dy3xykuw8zms47j/CMUsubject16.npz?dl=1
+  link: https://www.dropbox.com/scl/fi/qlsm1g9cmlro6bpm5kaf5/CMUsubject16.npz?rlkey=tcpqs58a20itev1q6xury7tbd&dl=1
   n_classes: 2
   n_features: 62
   n_test: 29
@@ -29,7 +29,7 @@ CharacterTrajectories:
   hash: 6fa3116eb2293a91f85aff9f1c955287
   l_max: 205
   l_min: 109
-  link: https://www.dropbox.com/s/dxonazzmnfiyw5b/CharacterTrajectories.npz?dl=1
+  link: https://www.dropbox.com/scl/fi/co52ulgsw6eoqbunfmdf6/CharacterTrajectories.npz?rlkey=mfip79sui3fvx3ztz94cfdybv&dl=1
   n_classes: 20
   n_features: 3
   n_test: 2558
@@ -38,7 +38,7 @@ DigitShapes:
   hash: 6e835ffaff57386f1900c06b76dece7e
   l_max: 98
   l_min: 30
-  link: https://www.dropbox.com/s/simxym0z3pyjok9/DigitShapes.npz?dl=1
+  link: https://www.dropbox.com/scl/fi/0dn3j5otwtle7oebelv4h/DigitShapes.npz?rlkey=i4kvcz3dfkqq3rdjrenru1q64&dl=1
   n_classes: 4
   n_features: 2
   n_test: 16
@@ -47,7 +47,7 @@ ECG:
   hash: 400c068922dcaa164a39e472c67a0ee8
   l_max: 152
   l_min: 39
-  link: https://www.dropbox.com/s/b8vpp1mo2u1q6u0/ECG.npz?dl=1
+  link: https://www.dropbox.com/scl/fi/2srgoilm0yb080qse5y2j/ECG.npz?rlkey=ytesn4h0b23kzatqllekuwz9q&dl=1
   n_classes: 2
   n_features: 2
   n_test: 100
@@ -56,7 +56,7 @@ JapaneseVowels:
   hash: 0f7a66a13060d6a6287c2c4b2c7bda5b
   l_max: 29
   l_min: 7
-  link: https://www.dropbox.com/s/4o1rbjn54wb9ca8/JapaneseVowels.npz?dl=1
+  link: https://www.dropbox.com/scl/fi/lrsbm9olro9pfc30fz6nd/JapaneseVowels.npz?rlkey=w4osb60hb8sidmorbculusytz&dl=1
   n_classes: 9
   n_features: 12
   n_test: 370
@@ -65,7 +65,7 @@ KickvsPunch:
   hash: 5261bcd131442b17522aab6b960df460
   l_max: 841
   l_min: 274
-  link: https://www.dropbox.com/s/4ujpyudtxkrdz1t/KickvsPunch.npz?dl=1
+  link: https://www.dropbox.com/scl/fi/p5boy3xvo72tit1qxm01k/KickvsPunch.npz?rlkey=23qb6mp0rn6fdqbbam705e7rd&dl=1
   n_classes: 2
   n_features: 62
   n_test: 10
@@ -74,7 +74,7 @@ LIBRAS:
   hash: 256e8e2f953c2253a85eb92536d4b98d
   l_max: 45
   l_min: 45
-  link: https://www.dropbox.com/s/q32mxq3fe1ul5us/LIBRAS.npz?dl=1
+  link: https://www.dropbox.com/scl/fi/8zn38fu8dm3e36fvy5piu/LIBRAS.npz?rlkey=6xa2c6ks4i31iyf69hob3mv1s&dl=1
   n_classes: 15
   n_features: 2
   n_test: 180
@@ -83,7 +83,7 @@ NetFlow:
   hash: cf580ce7d7c0573016142ae4a3260c80
   l_max: 997
   l_min: 50
-  link: https://www.dropbox.com/s/abm9gr9jjq000f7/NetFlow.npz?dl=1
+  link: https://www.dropbox.com/scl/fi/putjx8gklnx6e3rdlubap/NetFlow.npz?rlkey=hq2jouj5atmbwq1ope5yiztvr&dl=1
   n_classes: 2
   n_features: 4
   n_test: 534
@@ -92,7 +92,7 @@ PEMS:
   hash: 7465e1a562566c3936446227519810d6
   l_max: 144
   l_min: 144
-  link: https://www.dropbox.com/s/9fh08tvm3y2weg1/PEMS.npz?dl=1
+  link: https://www.dropbox.com/scl/fi/t9hw2zte6cnmrddz1eah2/PEMS.npz?rlkey=w3w91ltyxkrns7yoflmyr1s6y&dl=1
   n_classes: 7
   n_features: 963
   n_test: 173
@@ -101,7 +101,7 @@ PenDigits:
   hash: 52f76be43e9309ae4505ce33e6682c53
   l_max: 8
   l_min: 8
-  link: https://www.dropbox.com/s/lp3vmapwotfg7u7/PenDigits.npz?dl=1
+  link: https://www.dropbox.com/scl/fi/ayay3lff1lji2u8w01unv/PenDigits.npz?rlkey=9mjaka64jtcsd8ef1t21mx9al&dl=1
   n_classes: 10
   n_features: 2
   n_test: 10692
@@ -110,7 +110,7 @@ Shapes:
   hash: da9a5dc4ba3fba6db96e6f8545e9f429
   l_max: 98
   l_min: 52
-  link: https://www.dropbox.com/s/hwyiqrm9t20kvur/Shapes.npz?dl=1
+  link: https://www.dropbox.com/scl/fi/u9b44ihwdc0y4osqj0dy2/Shapes.npz?rlkey=kdejm1iaged5e42o22vapz85t&dl=1
   n_classes: 3
   n_features: 2
   n_test: 12
@@ -119,7 +119,7 @@ UWave:
   hash: b7e4aaaec908cf507e2210406fcf345f
   l_max: 315
   l_min: 315
-  link: https://www.dropbox.com/s/aaag5r4lty6gfya/UWave.npz?dl=1
+  link: https://www.dropbox.com/scl/fi/zcy2ol1wacgpvw8rjlbja/UWave.npz?rlkey=ma6t7drpsb07pps44s69ry45d&dl=1
   n_classes: 8
   n_features: 3
   n_test: 3582
@@ -128,7 +128,7 @@ Wafer:
   hash: 0df381a76accd72223c1cc19c353ac51
   l_max: 198
   l_min: 104
-  link: https://www.dropbox.com/s/cefa0tf6hs8lir5/Wafer.npz?dl=1
+  link: https://www.dropbox.com/scl/fi/ekckygxwn37mgkdg2wpqb/Wafer.npz?rlkey=k1duwt94rf79oams45cqgqzkx&dl=1
   n_classes: 2
   n_features: 6
   n_test: 896
@@ -137,7 +137,7 @@ WalkvsRun:
   hash: c4c2d51d00df229f6c70426513c8dfe4
   l_max: 1918
   l_min: 128
-  link: https://www.dropbox.com/s/jdctv77uprg3029/WalkvsRun.npz?dl=1
+  link: https://www.dropbox.com/scl/fi/f2rytapmhianb3l4f6dfh/WalkvsRun.npz?rlkey=3j4x69fjcmictetlq8bkdryqz&dl=1
   n_classes: 2
   n_features: 62
   n_test: 16
