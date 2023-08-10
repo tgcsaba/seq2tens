@@ -17,6 +17,7 @@ Then, install the requirements using pip by
 ```
 pip install -r requirements.txt
 ```
+Note that if GPUs are required, the `tensorflow-gpu` version should be [compatible with the CUDA installation](https://www.tensorflow.org/install/source#gpu), or [compiled from source](https://www.tensorflow.org/install/source).
 ***
 ## Time series classification experiments
 The tsc directory contains the appropriate scripts used to run the time series classification experiments in the paper.
