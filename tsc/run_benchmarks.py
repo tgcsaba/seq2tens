@@ -1,72 +1,44 @@
-from utils import train_model
-from models import init_ls2t_model
-
 import sys
 import os
-import json
-
-import tensorflow as tf
-
-tf.compat.v1.disable_eager_execution()
-
-from mixture import SWATS
+import yaml
 
 if len(sys.argv) > 1:
     GPU_ID = str(sys.argv[1])
-    os.environ['CUDA_VISIBLE_DEVICES'] = GPU_ID
+else:
+    GPU_ID = ''
+os.environ['CUDA_VISIBLE_DEVICES'] = GPU_ID
 
-with open('./datasets.json', 'r') as f:
-    datasets = json.load(f)
+sys.path.append('..')
+from seq2tens.datasets import get_available_datasets
+
+from sacred.observers import FileStorageObserver
+
+from experiment import ex
+
+num_repetitions = 10
+tmp_dir = './tmp/'
+save_dir = './benchmarks/'
+
+ex.observers.append(FileStorageObserver(save_dir))
+
+# load dataset specs
+datasets = get_available_datasets()
+
+# load models
+with open('./configs/configs.yaml', 'r') as f:
+    configs = list(yaml.load(f, Loader=yaml.SafeLoader).keys())
+
+if not os.path.isdir(tmp_dir):
+    os.mkdir(tmp_dir)
     
-    
-gpus = tf.config.list_physical_devices('GPU')
-if len(gpus) > 0:
-    for gpu in gpus:
-        tf.config.experimental.set_memory_growth(gpu, True)
-
-                 
-num_experiments = 4
-batch_size = 4
-
-
-preprocess_size = 64
-ls2t_size = 64
-ls2t_order = 2
-ls2t_depth = 3
-recursive_tensors = True
-preprocess_time = True
-monitor_test = False
-
-
-for preprocess in ['', 'conv']:
-    for i in range(num_experiments):
-        model_name = init_ls2t_model(preprocess_size, ls2t_size, ls2t_order, ls2t_depth, preprocess=preprocess, preprocess_time=preprocess_time, recursive_tensors=recursive_tensors, name_only=True)
-        model_name, model_args = model_name.split('_')[0], '_'.join(model_name.split('_')[1:])
-
-        save_dir = './results/{}/'.format(model_name)
-        if not os.path.isdir(save_dir):
-            os.makedirs(save_dir)
-
-        for dataset in datasets:
-
-            results_file = os.path.join(save_dir, '{}_{}_{}.txt'.format(dataset, model_args, i))
-
-            if os.path.exists(results_file):
-                print('{} already exists, continuing...'.format(results_file))
+for i in range(num_repetitions):
+    for config_name in configs:
+        for dataset_name in datasets:
+            exp_name = f'{config_name}_{dataset_name}_{i}'
+            exp_fp = os.path.join(tmp_dir, exp_name + '.txt')
+            if os.path.exists(exp_fp):
+                print(f'Information | benchmarks.py : tmp file for experiment {exp_name} already exists, skipping to the next.')
                 continue
-
-            with open(results_file, 'w'):
+            with open(exp_fp, 'w') as f:
                 pass
-
-            num_train = datasets[dataset]['n_train']
-            len_sequences = datasets[dataset]['l_max']
-            num_features = datasets[dataset]['n_features']
-            input_shape = (len_sequences, num_features, )
-
-            num_classes = datasets[dataset]['n_classes']
-
-#             with tf.Session(graph=tf.Graph(), config=tf.ConfigProto(gpu_options=tf.GPUOptions(allow_growth=True))) as sess:
-            tf_opt = SWATS(1e-3, clipvalue=1.)
-            model = init_ls2t_model(preprocess_size, ls2t_size, ls2t_order, ls2t_depth, preprocess=preprocess, preprocess_time=preprocess_time,
-                                     recursive_tensors=recursive_tensors, input_shape=input_shape, num_classes=num_classes)
-            train_model(dataset, model, normalize_data=True, batch_size=batch_size, balance_loss=True, save_dir=save_dir, experiment_idx=i, monitor_test=monitor_test, opt=tf_opt)
+            ex.run(named_configs=[config_name, 'dataset.' + dataset_name])

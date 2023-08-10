@@ -1,0 +1,83 @@
+{
+  "artifacts": [],
+  "command": "run",
+  "experiment": {
+    "base_dir": "/home/toth/Documents/S2T/S2T2.1-Clean/tsc",
+    "dependencies": [
+      "numpy==1.20.1",
+      "PyYAML==5.3.1",
+      "sacred==0.8.2",
+      "scikit-learn==0.23.2",
+      "tensorflow-gpu==2.4.1"
+    ],
+    "mainfile": "experiment.py",
+    "name": "tsc",
+    "repositories": [],
+    "sources": [
+      [
+        "experiment.py",
+        "_sources/experiment_77a3197491b4a55b2a8754c098c337d7.py"
+      ]
+    ]
+  },
+  "heartbeat": "2021-03-15T22:52:35.874835",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) Silver 4108 CPU @ 1.80GHz",
+    "gpus": {
+      "driver_version": "460.39",
+      "gpus": [
+        {
+          "model": "GeForce RTX 2080 Ti",
+          "persistence_mode": true,
+          "total_memory": 11019
+        },
+        {
+          "model": "GeForce RTX 2080 Ti",
+          "persistence_mode": true,
+          "total_memory": 11019
+        },
+        {
+          "model": "GeForce RTX 2080 Ti",
+          "persistence_mode": true,
+          "total_memory": 11019
+        }
+      ]
+    },
+    "hostname": "phoenix.maths.ox.ac.uk",
+    "os": [
+      "Linux",
+      "Linux-5.4.0-65-generic-x86_64-with-debian-bullseye-sid"
+    ],
+    "python_version": "3.7.9"
+  },
+  "meta": {
+    "command": "run",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2021-03-15T22:26:33.439690",
+  "status": "COMPLETED",
+  "stop_time": "2021-03-15T22:52:35.866922"
+}

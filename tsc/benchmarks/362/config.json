@@ -1,0 +1,47 @@
+{
+  "config_name": "FCN64LS2T64",
+  "dataset": {
+    "dataset_name": "NetFlow",
+    "hash": "cf580ce7d7c0573016142ae4a3260c80",
+    "l_max": 997,
+    "l_min": 50,
+    "link": "https://www.dropbox.com/s/abm9gr9jjq000f7/NetFlow.npz?dl=1",
+    "n_classes": 2,
+    "n_features": 4,
+    "n_test": 534,
+    "n_train": 803
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "dropout": null,
+    "fcn_depth": 3,
+    "fcn_filters": 64,
+    "fcn_kernels": [
+      8,
+      5,
+      3
+    ],
+    "ls2t_depth": 3,
+    "ls2t_difference": true,
+    "ls2t_embedding_order": 1,
+    "ls2t_functionals": 64,
+    "ls2t_order": 2,
+    "ls2t_recursive": true,
+    "renorm": false,
+    "residual_fcn": true,
+    "residual_ls2t": true,
+    "time_coord": true
+  },
+  "model_name": "FCNLS2T",
+  "seed": 8071246,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 16,
+    "min_batch_size": 4,
+    "num_epochs": 2000,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

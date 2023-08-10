@@ -1,0 +1,40 @@
+{
+  "config_name": "ResNet",
+  "dataset": {
+    "dataset_name": "KickvsPunch",
+    "hash": "5261bcd131442b17522aab6b960df460",
+    "l_max": 841,
+    "l_min": 274,
+    "link": "https://www.dropbox.com/s/4ujpyudtxkrdz1t/KickvsPunch.npz?dl=1",
+    "n_classes": 2,
+    "n_features": 62,
+    "n_test": 10,
+    "n_train": 16
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "dropout": null,
+    "fcn_depth": 3,
+    "fcn_filters": 64,
+    "fcn_kernels": [
+      8,
+      5,
+      3
+    ],
+    "renorm": false,
+    "residual_blocks": 3,
+    "time_coord": false
+  },
+  "model_name": "ResNet",
+  "seed": 39437324,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 64,
+    "min_batch_size": 4,
+    "num_epochs": 1500,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

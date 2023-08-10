@@ -1,0 +1,40 @@
+{
+  "config_name": "ResNet",
+  "dataset": {
+    "dataset_name": "WalkvsRun",
+    "hash": "c4c2d51d00df229f6c70426513c8dfe4",
+    "l_max": 1918,
+    "l_min": 128,
+    "link": "https://www.dropbox.com/s/jdctv77uprg3029/WalkvsRun.npz?dl=1",
+    "n_classes": 2,
+    "n_features": 62,
+    "n_test": 16,
+    "n_train": 28
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "dropout": null,
+    "fcn_depth": 3,
+    "fcn_filters": 64,
+    "fcn_kernels": [
+      8,
+      5,
+      3
+    ],
+    "renorm": false,
+    "residual_blocks": 3,
+    "time_coord": false
+  },
+  "model_name": "ResNet",
+  "seed": 26262365,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 64,
+    "min_batch_size": 4,
+    "num_epochs": 1500,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

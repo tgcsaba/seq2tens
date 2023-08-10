@@ -1,0 +1,38 @@
+{
+  "config_name": "DeepLS2T64",
+  "dataset": {
+    "dataset_name": "PenDigits",
+    "hash": "52f76be43e9309ae4505ce33e6682c53",
+    "l_max": 8,
+    "l_min": 8,
+    "link": "https://www.dropbox.com/s/lp3vmapwotfg7u7/PenDigits.npz?dl=1",
+    "n_classes": 10,
+    "n_features": 2,
+    "n_test": 10692,
+    "n_train": 300
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "depth": 3,
+    "difference": true,
+    "dropout": null,
+    "embedding_order": 1,
+    "num_functionals": 64,
+    "order": 2,
+    "recursive_weights": true,
+    "renorm": false,
+    "use_bias": true
+  },
+  "model_name": "DeepLS2T",
+  "seed": 158811799,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 16,
+    "min_batch_size": 4,
+    "num_epochs": 2000,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "config_name": "ResNet",
+  "dataset": {
+    "dataset_name": "ECG",
+    "hash": "400c068922dcaa164a39e472c67a0ee8",
+    "l_max": 152,
+    "l_min": 39,
+    "link": "https://www.dropbox.com/s/b8vpp1mo2u1q6u0/ECG.npz?dl=1",
+    "n_classes": 2,
+    "n_features": 2,
+    "n_test": 100,
+    "n_train": 100
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "dropout": null,
+    "fcn_depth": 3,
+    "fcn_filters": 64,
+    "fcn_kernels": [
+      8,
+      5,
+      3
+    ],
+    "renorm": false,
+    "residual_blocks": 3,
+    "time_coord": false
+  },
+  "model_name": "ResNet",
+  "seed": 787354766,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 64,
+    "min_batch_size": 4,
+    "num_epochs": 1500,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

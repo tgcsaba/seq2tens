@@ -1,0 +1,40 @@
+{
+  "config_name": "ResNet",
+  "dataset": {
+    "dataset_name": "Shapes",
+    "hash": "da9a5dc4ba3fba6db96e6f8545e9f429",
+    "l_max": 98,
+    "l_min": 52,
+    "link": "https://www.dropbox.com/s/hwyiqrm9t20kvur/Shapes.npz?dl=1",
+    "n_classes": 3,
+    "n_features": 2,
+    "n_test": 12,
+    "n_train": 18
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "dropout": null,
+    "fcn_depth": 3,
+    "fcn_filters": 64,
+    "fcn_kernels": [
+      8,
+      5,
+      3
+    ],
+    "renorm": false,
+    "residual_blocks": 3,
+    "time_coord": false
+  },
+  "model_name": "ResNet",
+  "seed": 942009960,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 64,
+    "min_batch_size": 4,
+    "num_epochs": 1500,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

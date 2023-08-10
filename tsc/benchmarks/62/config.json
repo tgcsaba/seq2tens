@@ -1,0 +1,47 @@
+{
+  "config_name": "FCN128LS2T64",
+  "dataset": {
+    "dataset_name": "UWave",
+    "hash": "b7e4aaaec908cf507e2210406fcf345f",
+    "l_max": 315,
+    "l_min": 315,
+    "link": "https://www.dropbox.com/s/aaag5r4lty6gfya/UWave.npz?dl=1",
+    "n_classes": 8,
+    "n_features": 3,
+    "n_test": 3582,
+    "n_train": 896
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "dropout": null,
+    "fcn_depth": 3,
+    "fcn_filters": 128,
+    "fcn_kernels": [
+      8,
+      5,
+      3
+    ],
+    "ls2t_depth": 3,
+    "ls2t_difference": true,
+    "ls2t_embedding_order": 1,
+    "ls2t_functionals": 64,
+    "ls2t_order": 2,
+    "ls2t_recursive": true,
+    "renorm": false,
+    "residual_fcn": true,
+    "residual_ls2t": true,
+    "time_coord": true
+  },
+  "model_name": "FCNLS2T",
+  "seed": 421654729,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 16,
+    "min_batch_size": 4,
+    "num_epochs": 2000,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

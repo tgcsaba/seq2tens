@@ -1,0 +1,38 @@
+{
+  "config_name": "DeepLS2T64",
+  "dataset": {
+    "dataset_name": "WalkvsRun",
+    "hash": "c4c2d51d00df229f6c70426513c8dfe4",
+    "l_max": 1918,
+    "l_min": 128,
+    "link": "https://www.dropbox.com/s/jdctv77uprg3029/WalkvsRun.npz?dl=1",
+    "n_classes": 2,
+    "n_features": 62,
+    "n_test": 16,
+    "n_train": 28
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "depth": 3,
+    "difference": true,
+    "dropout": null,
+    "embedding_order": 1,
+    "num_functionals": 64,
+    "order": 2,
+    "recursive_weights": true,
+    "renorm": false,
+    "use_bias": true
+  },
+  "model_name": "DeepLS2T",
+  "seed": 307780558,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 16,
+    "min_batch_size": 4,
+    "num_epochs": 2000,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

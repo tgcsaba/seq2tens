@@ -1,0 +1,40 @@
+{
+  "config_name": "FCN128",
+  "dataset": {
+    "dataset_name": "LIBRAS",
+    "hash": "256e8e2f953c2253a85eb92536d4b98d",
+    "l_max": 45,
+    "l_min": 45,
+    "link": "https://www.dropbox.com/s/q32mxq3fe1ul5us/LIBRAS.npz?dl=1",
+    "n_classes": 15,
+    "n_features": 2,
+    "n_test": 180,
+    "n_train": 180
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "depth": 3,
+    "dropout": null,
+    "filters": 128,
+    "kernels": [
+      8,
+      5,
+      3
+    ],
+    "renorm": false,
+    "residual": false,
+    "time_coord": false
+  },
+  "model_name": "FCN",
+  "seed": 988178646,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 16,
+    "min_batch_size": 4,
+    "num_epochs": 2000,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "config_name": "FCN128",
+  "dataset": {
+    "dataset_name": "PenDigits",
+    "hash": "52f76be43e9309ae4505ce33e6682c53",
+    "l_max": 8,
+    "l_min": 8,
+    "link": "https://www.dropbox.com/s/lp3vmapwotfg7u7/PenDigits.npz?dl=1",
+    "n_classes": 10,
+    "n_features": 2,
+    "n_test": 10692,
+    "n_train": 300
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "depth": 3,
+    "dropout": null,
+    "filters": 128,
+    "kernels": [
+      8,
+      5,
+      3
+    ],
+    "renorm": false,
+    "residual": false,
+    "time_coord": false
+  },
+  "model_name": "FCN",
+  "seed": 243689698,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 16,
+    "min_batch_size": 4,
+    "num_epochs": 2000,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

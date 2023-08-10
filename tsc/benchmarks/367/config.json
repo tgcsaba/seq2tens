@@ -1,0 +1,47 @@
+{
+  "config_name": "FCN64LS2T64",
+  "dataset": {
+    "dataset_name": "Wafer",
+    "hash": "0df381a76accd72223c1cc19c353ac51",
+    "l_max": 198,
+    "l_min": 104,
+    "link": "https://www.dropbox.com/s/cefa0tf6hs8lir5/Wafer.npz?dl=1",
+    "n_classes": 2,
+    "n_features": 6,
+    "n_test": 896,
+    "n_train": 298
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "dropout": null,
+    "fcn_depth": 3,
+    "fcn_filters": 64,
+    "fcn_kernels": [
+      8,
+      5,
+      3
+    ],
+    "ls2t_depth": 3,
+    "ls2t_difference": true,
+    "ls2t_embedding_order": 1,
+    "ls2t_functionals": 64,
+    "ls2t_order": 2,
+    "ls2t_recursive": true,
+    "renorm": false,
+    "residual_fcn": true,
+    "residual_ls2t": true,
+    "time_coord": true
+  },
+  "model_name": "FCNLS2T",
+  "seed": 939342270,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 16,
+    "min_batch_size": 4,
+    "num_epochs": 2000,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

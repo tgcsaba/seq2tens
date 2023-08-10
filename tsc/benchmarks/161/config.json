@@ -1,0 +1,38 @@
+{
+  "config_name": "DeepLS2T64",
+  "dataset": {
+    "dataset_name": "AUSLAN",
+    "hash": "e5ec014d1fe103c671cc266672ed1296",
+    "l_max": 136,
+    "l_min": 45,
+    "link": "https://www.dropbox.com/s/rut5f6hn57nx7c9/AUSLAN.npz?dl=1",
+    "n_classes": 95,
+    "n_features": 22,
+    "n_test": 1425,
+    "n_train": 1140
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "depth": 3,
+    "difference": true,
+    "dropout": null,
+    "embedding_order": 1,
+    "num_functionals": 64,
+    "order": 2,
+    "recursive_weights": true,
+    "renorm": false,
+    "use_bias": true
+  },
+  "model_name": "DeepLS2T",
+  "seed": 184330089,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 16,
+    "min_batch_size": 4,
+    "num_epochs": 2000,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

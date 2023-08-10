@@ -1,0 +1,128 @@
+DeepLS2T64:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    difference: true
+    dropout: null
+    embedding_order: 1
+    num_functionals: 64
+    order: 2
+    recursive_weights: true
+    renorm: false
+    use_bias: true
+  model_name: DeepLS2T
+  train_hparams:
+    batch_size: 0.1
+    callbacks: auto
+    cb_hparams: null
+    max_batch_size: 16
+    min_batch_size: 4
+    num_epochs: 2000
+    opt_hparams: null
+    optimizer: adam
+FCN128:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: null
+    filters: 128
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 0.1
+    callbacks: auto
+    cb_hparams: null
+    max_batch_size: 16
+    min_batch_size: 4
+    num_epochs: 2000
+    opt_hparams: null
+    optimizer: adam
+FCN64LS2T64:
+  model_hparams:
+    batch_norm: true
+    dropout: null
+    fcn_depth: 3
+    fcn_filters: 64
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 3
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 64
+    ls2t_order: 2
+    ls2t_recursive: true
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 0.1
+    callbacks: auto
+    cb_hparams: null
+    max_batch_size: 16
+    min_batch_size: 4
+    num_epochs: 2000
+    opt_hparams: null
+    optimizer: adam
+FCN128LS2T64:
+  model_hparams:
+    batch_norm: true
+    dropout: null
+    fcn_depth: 3
+    fcn_filters: 128
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 3
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 64
+    ls2t_order: 2
+    ls2t_recursive: true
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 0.1
+    callbacks: auto
+    cb_hparams: null
+    max_batch_size: 16
+    min_batch_size: 4
+    num_epochs: 2000
+    opt_hparams: null
+    optimizer: adam
+ResNet:
+  model_hparams:
+    batch_norm: true
+    dropout: null
+    fcn_depth: 3
+    fcn_filters: 64
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual_blocks: 3
+    time_coord: false
+  model_name: ResNet
+  train_hparams:
+    batch_size: 0.1
+    callbacks: auto
+    cb_hparams: null
+    max_batch_size: 64
+    min_batch_size: 4
+    num_epochs: 1500
+    opt_hparams: null
+    optimizer: adam

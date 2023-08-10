@@ -1,0 +1,47 @@
+{
+  "config_name": "FCN64LS2T64",
+  "dataset": {
+    "dataset_name": "CMUsubject16",
+    "hash": "85c0e1885c5a8096a93c2f87c967975d",
+    "l_max": 580,
+    "l_min": 127,
+    "link": "https://www.dropbox.com/s/dy3xykuw8zms47j/CMUsubject16.npz?dl=1",
+    "n_classes": 2,
+    "n_features": 62,
+    "n_test": 29,
+    "n_train": 29
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "dropout": null,
+    "fcn_depth": 3,
+    "fcn_filters": 64,
+    "fcn_kernels": [
+      8,
+      5,
+      3
+    ],
+    "ls2t_depth": 3,
+    "ls2t_difference": true,
+    "ls2t_embedding_order": 1,
+    "ls2t_functionals": 64,
+    "ls2t_order": 2,
+    "ls2t_recursive": true,
+    "renorm": false,
+    "residual_fcn": true,
+    "residual_ls2t": true,
+    "time_coord": true
+  },
+  "model_name": "FCNLS2T",
+  "seed": 501003471,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 16,
+    "min_batch_size": 4,
+    "num_epochs": 2000,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

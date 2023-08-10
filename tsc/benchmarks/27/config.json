@@ -1,0 +1,40 @@
+{
+  "config_name": "FCN128",
+  "dataset": {
+    "dataset_name": "PEMS",
+    "hash": "7465e1a562566c3936446227519810d6",
+    "l_max": 144,
+    "l_min": 144,
+    "link": "https://www.dropbox.com/s/9fh08tvm3y2weg1/PEMS.npz?dl=1",
+    "n_classes": 7,
+    "n_features": 963,
+    "n_test": 173,
+    "n_train": 267
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "depth": 3,
+    "dropout": null,
+    "filters": 128,
+    "kernels": [
+      8,
+      5,
+      3
+    ],
+    "renorm": false,
+    "residual": false,
+    "time_coord": false
+  },
+  "model_name": "FCN",
+  "seed": 395019833,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 16,
+    "min_batch_size": 4,
+    "num_epochs": 2000,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

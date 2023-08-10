@@ -1,0 +1,47 @@
+{
+  "config_name": "FCN128LS2T64",
+  "dataset": {
+    "dataset_name": "KickvsPunch",
+    "hash": "5261bcd131442b17522aab6b960df460",
+    "l_max": 841,
+    "l_min": 274,
+    "link": "https://www.dropbox.com/s/4ujpyudtxkrdz1t/KickvsPunch.npz?dl=1",
+    "n_classes": 2,
+    "n_features": 62,
+    "n_test": 10,
+    "n_train": 16
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "dropout": null,
+    "fcn_depth": 3,
+    "fcn_filters": 128,
+    "fcn_kernels": [
+      8,
+      5,
+      3
+    ],
+    "ls2t_depth": 3,
+    "ls2t_difference": true,
+    "ls2t_embedding_order": 1,
+    "ls2t_functionals": 64,
+    "ls2t_order": 2,
+    "ls2t_recursive": true,
+    "renorm": false,
+    "residual_fcn": true,
+    "residual_ls2t": true,
+    "time_coord": true
+  },
+  "model_name": "FCNLS2T",
+  "seed": 171377351,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 16,
+    "min_batch_size": 4,
+    "num_epochs": 2000,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

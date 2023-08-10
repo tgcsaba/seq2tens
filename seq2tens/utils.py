@@ -1,82 +1,87 @@
 import numpy as np
 import tensorflow as tf
 
-from .layers import LS2T
+from tensorflow.keras.callbacks import Callback, EarlyStopping      
 
-from tensorflow.keras import Model
-from tensorflow.keras.layers import Conv1D, Dense
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-def LSUVReinitializer(model, X_init, margin=0.1, max_iter=10, jitter=1e-6):
+class ValidationMetrics(Callback):
+    def __init__(self, metrics, X_val, y_val, batch_size=None, verbose=False):
+        self.metrics = metrics
+        self.X_val = X_val
+        self.y_val = y_val
+        self.batch_size = batch_size
+        self.verbose = verbose
+
+    def on_epoch_end(self, epoch, logs={}):
+        y_pred_val = self.model.predict(self.X_val, batch_size=self.batch_size)
+        
+        for metric_name, metric in self.metrics.items():
+            metric_value = metric(self.y_val, y_pred_val)
+            val_metric_name = f'val_{metric_name}'
+            logs[val_metric_name] = metric_value
+            if self.verbose:
+                print(f'\r{val_metric_name} : {metric_value:0.04f} - ', end='')
+
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+class EarlyStoppingAlwaysRestore(EarlyStopping):
     """
-    https://arxiv.org/abs/1511.06422
-    @article{mishkin2015all,
-    title={All you need is a good init},
-    author={Mishkin, Dmytro and Matas, Jiri},
-    journal={arXiv preprint arXiv:1511.06422},
-    year={2015}
+    A small upgrade on the standard EarlyStopping callback of keras. Fixes the issue that early stopping does not restore the best weights with the
+    restore_best_weights option when the optimization ends by reaching the max number of epochs (rather than early stopping triggering the end of training).
+    See:
+        https://github.com/keras-team/keras/issues/12511
+        https://github.com/tensorflow/tensorflow/issues/35634
+    """  
+    def on_train_end(self, logs=None):
+        EarlyStopping.on_train_end(self, logs=logs)
+        if self.restore_best_weights:
+            if self.verbose > 0:
+                print('Restoring model weights from the end of the best epoch.')
+            self.model.set_weights(self.best_weights)
+
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+class SacredLogger(Callback):
     """
-    margin = 0.1
-    max_iter = 10
-    jitter = 1e-6
-    for i, layer in enumerate(model.layers[:-1]):
-        print('{}: {}'.format(i, model.layers[i]))
-        if isinstance(layer, LS2T):
-            weights = layer.get_weights()
-            weights[0] = np.stack([np.linalg.qr(A)[0] for A in weights[0]], axis=0)
-            layer.set_weights(weights)
-
-            temp_model = Model(model.input, layer.output)
-
-            values = temp_model.predict(X_init)
-            if layer.return_sequences:
-                values = values.reshape([-1, layer.num_levels, layer.units])
-            stds = np.std(values, axis=0)
-            
-            if layer.recursive_tensors:
-                stds = stds**(1./(layer.num_levels))
-                rescales = np.concatenate((np.ones((1, layer.units)), np.cumprod(stds[:-1], axis=0)), axis=0)
-                rescales = np.maximum(rescales, jitter)
-                rescales = stds / rescales
-                rescales = rescales**(float(layer.num_levels))
+    A logger callback for Sacred (https://github.com/IDSIA/sacred/), that logs the quantities monitored by the Model.fit function during training.
+    """
+    def __init__(self, _run):
+        """
+        Initializes a logger callback for Sacred that takes as argument a Sacred Run object.
+        Args:
+            _run (Run): A Sacred Run object that represents and manages a single run of an experiment.
+        """
+        self._run = _run
+    def on_epoch_end(self, epoch, logs={}):
+        for metric, value in logs.items():
+            metric = metric.lower().replace('sparse_', '').replace('categorical_', '').replace('binary_', '')
+            if metric[:4] == 'val_':
+                metric = metric[4:]
+                metric = f'validation.{metric}'
             else:
-                rescales = np.concatenate([np.tile(stds[m:m+1, :]**(1./(m+1)), [m+1, 1]) for m in range(layer.num_levels)], axis=0)
-            rescales = np.maximum(rescales, jitter)
-            weights[0] /= rescales[:, None, :]
-            layer.set_weights(weights)
-        elif isinstance(layer, Conv1D):
-            weights = layer.get_weights()
-            weights[0] = np.linalg.qr(weights[0].reshape([-1, layer.filters]))[0].reshape([layer.kernel_size[0], -1, layer.filters])
-            layer.set_weights(weights)
+                metric = f'training.{metric}'
+            self._run.log_scalar(metric, value, epoch)
+            
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-            temp_model = Model(model.input, layer.output)
-            values = temp_model.predict(X_init)
-            values = values.reshape([-1, layer.filters])
-            stds = np.std(values, axis=0)
-            current_iter = 0
-            while np.any(np.abs(stds - 1.0) > margin) and current_iter < 10:
-                rescales = np.maximum(stds, jitter)
-                weights[0] /= rescales[None, None, :]
-                layer.set_weights(weights)
-                values = temp_model.predict(X_init)
-                values = values.reshape([-1, layer.filters])
-                stds = np.std(values, axis=0)
-                current_iter += 1
-        elif isinstance(layer, Dense):
-            weights = layer.get_weights()
-            weights[0] = np.linalg.qr(weights[0])[0]
-            layer.set_weights(weights)
+def make_balanced_generator(X, y): 
+    
+    num_classes = np.unique(y).size
+    num_ex_per_class = np.bincount(y)
+    
+    ds = tf.data.Dataset.from_tensor_slices((X, y))
 
-            temp_model = Model(model.input, layer.output)
-            values = temp_model.predict(X_init)
-            values = values.reshape([-1, layer.units])
-            stds = np.std(values, axis=0)
-            current_iter = 0
-            while np.any(np.abs(stds - 1.0) > margin) and current_iter < 10:
-                stds = np.maximum(stds, jitter)
-                weights[0] /= stds[None, :]
-                layer.set_weights(weights)
-                values = temp_model.predict(X_init)
-                values = values.reshape([-1, layer.units])
-                stds = np.std(values, axis=0)
-                current_iter += 1
-    return model
+    def _is_from_class(class_id, *args):
+        if len(args) == 2:
+            data, label = args
+        if len(args) == 3:
+            data, label, sample_weights = args
+        return tf.math.equal(label, class_id)
+
+    ds_class = [ds.filter(lambda *args: _is_from_class(c, *args)).shuffle(num_ex_per_class[c], reshuffle_each_iteration=True).repeat() for c in range(num_classes)]
+    
+    ds_balanced = tf.data.experimental.choose_from_datasets(ds_class, tf.data.Dataset.range(num_classes).repeat())
+    
+    return ds_balanced
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------

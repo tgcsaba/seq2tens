@@ -1,0 +1,40 @@
+{
+  "config_name": "ResNet",
+  "dataset": {
+    "dataset_name": "CharacterTrajectories",
+    "hash": "6fa3116eb2293a91f85aff9f1c955287",
+    "l_max": 205,
+    "l_min": 109,
+    "link": "https://www.dropbox.com/s/dxonazzmnfiyw5b/CharacterTrajectories.npz?dl=1",
+    "n_classes": 20,
+    "n_features": 3,
+    "n_test": 2558,
+    "n_train": 300
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "dropout": null,
+    "fcn_depth": 3,
+    "fcn_filters": 64,
+    "fcn_kernels": [
+      8,
+      5,
+      3
+    ],
+    "renorm": false,
+    "residual_blocks": 3,
+    "time_coord": false
+  },
+  "model_name": "ResNet",
+  "seed": 528161439,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 64,
+    "min_batch_size": 4,
+    "num_epochs": 1500,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

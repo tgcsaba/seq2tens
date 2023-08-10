@@ -1,0 +1,40 @@
+{
+  "config_name": "FCN128",
+  "dataset": {
+    "dataset_name": "CharacterTrajectories",
+    "hash": "6fa3116eb2293a91f85aff9f1c955287",
+    "l_max": 205,
+    "l_min": 109,
+    "link": "https://www.dropbox.com/s/dxonazzmnfiyw5b/CharacterTrajectories.npz?dl=1",
+    "n_classes": 20,
+    "n_features": 3,
+    "n_test": 2558,
+    "n_train": 300
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "depth": 3,
+    "dropout": null,
+    "filters": 128,
+    "kernels": [
+      8,
+      5,
+      3
+    ],
+    "renorm": false,
+    "residual": false,
+    "time_coord": false
+  },
+  "model_name": "FCN",
+  "seed": 532820104,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 16,
+    "min_batch_size": 4,
+    "num_epochs": 2000,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

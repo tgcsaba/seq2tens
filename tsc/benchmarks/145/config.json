@@ -1,0 +1,40 @@
+{
+  "config_name": "ResNet",
+  "dataset": {
+    "dataset_name": "AUSLAN",
+    "hash": "e5ec014d1fe103c671cc266672ed1296",
+    "l_max": 136,
+    "l_min": 45,
+    "link": "https://www.dropbox.com/s/rut5f6hn57nx7c9/AUSLAN.npz?dl=1",
+    "n_classes": 95,
+    "n_features": 22,
+    "n_test": 1425,
+    "n_train": 1140
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "dropout": null,
+    "fcn_depth": 3,
+    "fcn_filters": 64,
+    "fcn_kernels": [
+      8,
+      5,
+      3
+    ],
+    "renorm": false,
+    "residual_blocks": 3,
+    "time_coord": false
+  },
+  "model_name": "ResNet",
+  "seed": 934098773,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 64,
+    "min_batch_size": 4,
+    "num_epochs": 1500,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "config_name": "FCN128",
+  "dataset": {
+    "dataset_name": "KickvsPunch",
+    "hash": "5261bcd131442b17522aab6b960df460",
+    "l_max": 841,
+    "l_min": 274,
+    "link": "https://www.dropbox.com/s/4ujpyudtxkrdz1t/KickvsPunch.npz?dl=1",
+    "n_classes": 2,
+    "n_features": 62,
+    "n_test": 10,
+    "n_train": 16
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "depth": 3,
+    "dropout": null,
+    "filters": 128,
+    "kernels": [
+      8,
+      5,
+      3
+    ],
+    "renorm": false,
+    "residual": false,
+    "time_coord": false
+  },
+  "model_name": "FCN",
+  "seed": 175504810,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 16,
+    "min_batch_size": 4,
+    "num_epochs": 2000,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

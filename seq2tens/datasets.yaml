@@ -1,0 +1,144 @@
+AUSLAN:
+  hash: e5ec014d1fe103c671cc266672ed1296
+  l_max: 136
+  l_min: 45
+  link: https://www.dropbox.com/s/rut5f6hn57nx7c9/AUSLAN.npz?dl=1
+  n_classes: 95
+  n_features: 22
+  n_test: 1425
+  n_train: 1140
+ArabicDigits:
+  hash: 96e850a635a58bf7e30a24be35bcdada
+  l_max: 93
+  l_min: 4
+  link: https://www.dropbox.com/s/jiyabaayywsde73/ArabicDigits.npz?dl=1
+  n_classes: 10
+  n_features: 13
+  n_test: 2200
+  n_train: 6600
+CMUsubject16:
+  hash: 85c0e1885c5a8096a93c2f87c967975d
+  l_max: 580
+  l_min: 127
+  link: https://www.dropbox.com/s/dy3xykuw8zms47j/CMUsubject16.npz?dl=1
+  n_classes: 2
+  n_features: 62
+  n_test: 29
+  n_train: 29
+CharacterTrajectories:
+  hash: 6fa3116eb2293a91f85aff9f1c955287
+  l_max: 205
+  l_min: 109
+  link: https://www.dropbox.com/s/dxonazzmnfiyw5b/CharacterTrajectories.npz?dl=1
+  n_classes: 20
+  n_features: 3
+  n_test: 2558
+  n_train: 300
+DigitShapes:
+  hash: 6e835ffaff57386f1900c06b76dece7e
+  l_max: 98
+  l_min: 30
+  link: https://www.dropbox.com/s/simxym0z3pyjok9/DigitShapes.npz?dl=1
+  n_classes: 4
+  n_features: 2
+  n_test: 16
+  n_train: 24
+ECG:
+  hash: 400c068922dcaa164a39e472c67a0ee8
+  l_max: 152
+  l_min: 39
+  link: https://www.dropbox.com/s/b8vpp1mo2u1q6u0/ECG.npz?dl=1
+  n_classes: 2
+  n_features: 2
+  n_test: 100
+  n_train: 100
+JapaneseVowels:
+  hash: 0f7a66a13060d6a6287c2c4b2c7bda5b
+  l_max: 29
+  l_min: 7
+  link: https://www.dropbox.com/s/4o1rbjn54wb9ca8/JapaneseVowels.npz?dl=1
+  n_classes: 9
+  n_features: 12
+  n_test: 370
+  n_train: 270
+KickvsPunch:
+  hash: 5261bcd131442b17522aab6b960df460
+  l_max: 841
+  l_min: 274
+  link: https://www.dropbox.com/s/4ujpyudtxkrdz1t/KickvsPunch.npz?dl=1
+  n_classes: 2
+  n_features: 62
+  n_test: 10
+  n_train: 16
+LIBRAS:
+  hash: 256e8e2f953c2253a85eb92536d4b98d
+  l_max: 45
+  l_min: 45
+  link: https://www.dropbox.com/s/q32mxq3fe1ul5us/LIBRAS.npz?dl=1
+  n_classes: 15
+  n_features: 2
+  n_test: 180
+  n_train: 180
+NetFlow:
+  hash: cf580ce7d7c0573016142ae4a3260c80
+  l_max: 997
+  l_min: 50
+  link: https://www.dropbox.com/s/abm9gr9jjq000f7/NetFlow.npz?dl=1
+  n_classes: 2
+  n_features: 4
+  n_test: 534
+  n_train: 803
+PEMS:
+  hash: 7465e1a562566c3936446227519810d6
+  l_max: 144
+  l_min: 144
+  link: https://www.dropbox.com/s/9fh08tvm3y2weg1/PEMS.npz?dl=1
+  n_classes: 7
+  n_features: 963
+  n_test: 173
+  n_train: 267
+PenDigits:
+  hash: 52f76be43e9309ae4505ce33e6682c53
+  l_max: 8
+  l_min: 8
+  link: https://www.dropbox.com/s/lp3vmapwotfg7u7/PenDigits.npz?dl=1
+  n_classes: 10
+  n_features: 2
+  n_test: 10692
+  n_train: 300
+Shapes:
+  hash: da9a5dc4ba3fba6db96e6f8545e9f429
+  l_max: 98
+  l_min: 52
+  link: https://www.dropbox.com/s/hwyiqrm9t20kvur/Shapes.npz?dl=1
+  n_classes: 3
+  n_features: 2
+  n_test: 12
+  n_train: 18
+UWave:
+  hash: b7e4aaaec908cf507e2210406fcf345f
+  l_max: 315
+  l_min: 315
+  link: https://www.dropbox.com/s/aaag5r4lty6gfya/UWave.npz?dl=1
+  n_classes: 8
+  n_features: 3
+  n_test: 3582
+  n_train: 896
+Wafer:
+  hash: 0df381a76accd72223c1cc19c353ac51
+  l_max: 198
+  l_min: 104
+  link: https://www.dropbox.com/s/cefa0tf6hs8lir5/Wafer.npz?dl=1
+  n_classes: 2
+  n_features: 6
+  n_test: 896
+  n_train: 298
+WalkvsRun:
+  hash: c4c2d51d00df229f6c70426513c8dfe4
+  l_max: 1918
+  l_min: 128
+  link: https://www.dropbox.com/s/jdctv77uprg3029/WalkvsRun.npz?dl=1
+  n_classes: 2
+  n_features: 62
+  n_test: 16
+  n_train: 28

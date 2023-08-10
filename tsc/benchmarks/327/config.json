@@ -1,0 +1,38 @@
+{
+  "config_name": "DeepLS2T64",
+  "dataset": {
+    "dataset_name": "JapaneseVowels",
+    "hash": "0f7a66a13060d6a6287c2c4b2c7bda5b",
+    "l_max": 29,
+    "l_min": 7,
+    "link": "https://www.dropbox.com/s/4o1rbjn54wb9ca8/JapaneseVowels.npz?dl=1",
+    "n_classes": 9,
+    "n_features": 12,
+    "n_test": 370,
+    "n_train": 270
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "depth": 3,
+    "difference": true,
+    "dropout": null,
+    "embedding_order": 1,
+    "num_functionals": 64,
+    "order": 2,
+    "recursive_weights": true,
+    "renorm": false,
+    "use_bias": true
+  },
+  "model_name": "DeepLS2T",
+  "seed": 12055349,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 16,
+    "min_batch_size": 4,
+    "num_epochs": 2000,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

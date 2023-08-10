@@ -1,0 +1,38 @@
+{
+  "config_name": "DeepLS2T64",
+  "dataset": {
+    "dataset_name": "ECG",
+    "hash": "400c068922dcaa164a39e472c67a0ee8",
+    "l_max": 152,
+    "l_min": 39,
+    "link": "https://www.dropbox.com/s/b8vpp1mo2u1q6u0/ECG.npz?dl=1",
+    "n_classes": 2,
+    "n_features": 2,
+    "n_test": 100,
+    "n_train": 100
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "depth": 3,
+    "difference": true,
+    "dropout": null,
+    "embedding_order": 1,
+    "num_functionals": 64,
+    "order": 2,
+    "recursive_weights": true,
+    "renorm": false,
+    "use_bias": true
+  },
+  "model_name": "DeepLS2T",
+  "seed": 351601395,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 16,
+    "min_batch_size": 4,
+    "num_epochs": 2000,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

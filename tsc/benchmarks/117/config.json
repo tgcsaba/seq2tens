@@ -1,0 +1,47 @@
+{
+  "config_name": "FCN64LS2T64",
+  "dataset": {
+    "dataset_name": "DigitShapes",
+    "hash": "6e835ffaff57386f1900c06b76dece7e",
+    "l_max": 98,
+    "l_min": 30,
+    "link": "https://www.dropbox.com/s/simxym0z3pyjok9/DigitShapes.npz?dl=1",
+    "n_classes": 4,
+    "n_features": 2,
+    "n_test": 16,
+    "n_train": 24
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "dropout": null,
+    "fcn_depth": 3,
+    "fcn_filters": 64,
+    "fcn_kernels": [
+      8,
+      5,
+      3
+    ],
+    "ls2t_depth": 3,
+    "ls2t_difference": true,
+    "ls2t_embedding_order": 1,
+    "ls2t_functionals": 64,
+    "ls2t_order": 2,
+    "ls2t_recursive": true,
+    "renorm": false,
+    "residual_fcn": true,
+    "residual_ls2t": true,
+    "time_coord": true
+  },
+  "model_name": "FCNLS2T",
+  "seed": 522187254,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 16,
+    "min_batch_size": 4,
+    "num_epochs": 2000,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}

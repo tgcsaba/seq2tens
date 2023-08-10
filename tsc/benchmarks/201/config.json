@@ -1,0 +1,47 @@
+{
+  "config_name": "FCN64LS2T64",
+  "dataset": {
+    "dataset_name": "LIBRAS",
+    "hash": "256e8e2f953c2253a85eb92536d4b98d",
+    "l_max": 45,
+    "l_min": 45,
+    "link": "https://www.dropbox.com/s/q32mxq3fe1ul5us/LIBRAS.npz?dl=1",
+    "n_classes": 15,
+    "n_features": 2,
+    "n_test": 180,
+    "n_train": 180
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "dropout": null,
+    "fcn_depth": 3,
+    "fcn_filters": 64,
+    "fcn_kernels": [
+      8,
+      5,
+      3
+    ],
+    "ls2t_depth": 3,
+    "ls2t_difference": true,
+    "ls2t_embedding_order": 1,
+    "ls2t_functionals": 64,
+    "ls2t_order": 2,
+    "ls2t_recursive": true,
+    "renorm": false,
+    "residual_fcn": true,
+    "residual_ls2t": true,
+    "time_coord": true
+  },
+  "model_name": "FCNLS2T",
+  "seed": 628038168,
+  "train_hparams": {
+    "batch_size": 0.1,
+    "callbacks": "auto",
+    "cb_hparams": null,
+    "max_batch_size": 16,
+    "min_batch_size": 4,
+    "num_epochs": 2000,
+    "opt_hparams": null,
+    "optimizer": "adam"
+  }
+}
