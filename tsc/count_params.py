@@ -23,7 +23,7 @@ ex.observers.append(FileStorageObserver(save_dir))
 datasets = get_available_datasets()
 
 # load models
-with open('./configs.yaml', 'r') as f:
+with open('./configs/configs.yaml', 'r') as f:
     configs = list(yaml.load(f, Loader=yaml.SafeLoader).keys())
 
 for config_name in configs:
