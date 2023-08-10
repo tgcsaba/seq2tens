@@ -1,0 +1,56 @@
+{
+  "config_name": "FCNLS2TBest",
+  "dataset": {
+    "add_mask": true,
+    "add_static": true,
+    "add_time": true,
+    "add_tmask": true,
+    "dataset_name": "physionet2012",
+    "normalize_data": true,
+    "pad_sequences": true
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "dropout": 0.3,
+    "fcn_depth": 3,
+    "fcn_filters": 64,
+    "fcn_kernels": [
+      8,
+      5,
+      3
+    ],
+    "ls2t_depth": 3,
+    "ls2t_difference": true,
+    "ls2t_embedding_order": 1,
+    "ls2t_functionals": 256,
+    "ls2t_normalization": true,
+    "ls2t_order": 3,
+    "ls2t_recursive": true,
+    "renorm": false,
+    "residual_fcn": true,
+    "residual_ls2t": true,
+    "spatial_dropout": 0.4,
+    "time_coord": true
+  },
+  "model_name": "FCNLS2T",
+  "seed": 16932330,
+  "train_hparams": {
+    "batch_size": 32,
+    "callbacks": "auto",
+    "cb_hparams": {
+      "es_patience": 50,
+      "lr_factor": 0.5,
+      "lr_min": 0.0001,
+      "lr_patience": 10,
+      "mode": "max",
+      "monitor": "val_auprc"
+    },
+    "max_batch_size": null,
+    "min_batch_size": null,
+    "num_epochs": 500,
+    "opt_hparams": {
+      "learning_rate": 0.0001
+    },
+    "optimizer": "adam"
+  }
+}

@@ -1,0 +1,8 @@
+Physionet2012:
+  dataset_name: physionet2012
+  add_time: true
+  add_static: true
+  add_mask: true
+  add_tmask: true
+  normalize_data: true
+  pad_sequences: true

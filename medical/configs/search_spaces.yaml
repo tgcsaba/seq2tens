@@ -1,0 +1,69 @@
+FCNLS2T:
+  model_hparams.dropout:
+  - null
+  - 0.1
+  - 0.2
+  - 0.3
+  - 0.4
+  model_hparams.spatial_dropout:
+  - null
+  - 0.1
+  - 0.2
+  - 0.3
+  - 0.4
+  model_hparams.fcn_filters:
+  - 64
+  - 128
+  - 256
+  model_hparams.ls2t_functionals:
+  - 64
+  - 128
+  - 256
+  model_hparams.ls2t_depth:
+  - 1
+  - 2
+  - 3
+  model_hparams.ls2t_order:
+  - 2
+  - 3
+  - 4
+  model_hparams.ls2t_recursive:
+  - true
+  - false
+  train_hparams.batch_size:
+  - 4
+  - 8
+  - 16
+  - 32
+  train_hparams.opt_hparams.learning_rate:
+  - 0.001
+  - 0.0005
+  - 0.00025
+  - 0.0001
+FCN:
+  model_hparams.dropout:
+  - null
+  - 0.1
+  - 0.2
+  - 0.3
+  - 0.4
+  model_hparams.spatial_dropout:
+  - null
+  - 0.1
+  - 0.2
+  - 0.3
+  - 0.4
+  model_hparams.filters:
+  - 64
+  - 128
+  - 256
+  train_hparams.batch_size:
+  - 4
+  - 8
+  - 16
+  - 32
+  train_hparams.opt_hparams.learning_rate:
+  - 0.001
+  - 0.0005
+  - 0.00025
+  - 0.0001

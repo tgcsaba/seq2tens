@@ -1,0 +1,91 @@
+GRUD:
+  accuracy:
+    mean: 80.0 
+    std: 2.9
+  auprc:
+    mean: 53.7
+    std: 0.9
+  auroc:
+    mean: 86.3
+    std: 0.3
+  time:
+    mean: 8.67
+    std: 0.49
+GRUSimple:
+  accuracy:
+    mean: 82.2 
+    std: 0.2
+  auprc:
+    mean: 42.2
+    std: 0.6
+  auroc:
+    mean: 80.8
+    std: 1.1
+  time:
+    mean: 30.0
+    std: 2.5
+IPNets:
+  accuracy:
+    mean: 79.4
+    std: 0.3
+  auprc:
+    mean: 51.0
+    std: 0.6
+  auroc:
+    mean: 86.0
+    std: 0.2
+  time:
+    mean: 25.3
+    std: 1.8
+PhasedLSTM:
+  accuracy:
+    mean: 76.8
+    std: 5.2
+  auprc:
+    mean: 38.7
+    std: 1.5
+  auroc:
+    mean: 79.0
+    std: 1.0
+  time:
+    mean: 44.6
+    std: 2.3
+Transformer:
+  accuracy:
+    mean: 83.7
+    std: 3.5
+  auprc:
+    mean: 52.8
+    std: 2.2
+  auroc:
+    mean: 86.3
+    std: 0.8
+  time:
+    mean: 6.06
+    std: 0.06
+LatentODE:
+  accuracy:
+    mean: 76.0
+    std: 0.1
+  auprc:
+    mean: 50.7
+    std: 1.7
+  auroc:
+    mean: 85.7
+    std: 0.6
+  time:
+    mean: 3500
+    std: .nan
+SeFTAttn:
+  accuracy:
+    mean: 75.3
+    std: 3.5
+  auprc:
+    mean: 52.4
+    std: 1.1
+  auroc:
+    mean: 85.1
+    std: 0.4
+  time:
+    mean: 7.62
+    std: 0.1

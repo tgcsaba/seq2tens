@@ -1,0 +1,1380 @@
+FCN1:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: 0.2
+    filters: 256
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: 0.4
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 32
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.001
+    optimizer: adam
+FCN10:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: 0.1
+    filters: 64
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: null
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 16
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.001
+    optimizer: adam
+FCN11:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: null
+    filters: 64
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: null
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 8
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.001
+    optimizer: adam
+FCN12:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: 0.3
+    filters: 128
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: 0.2
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 8
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0001
+    optimizer: adam
+FCN13:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: 0.4
+    filters: 128
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: 0.4
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 16
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.00025
+    optimizer: adam
+FCN14:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: 0.4
+    filters: 128
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: null
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 32
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0001
+    optimizer: adam
+FCN15:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: 0.3
+    filters: 256
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: 0.3
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 32
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.00025
+    optimizer: adam
+FCN16:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: 0.4
+    filters: 256
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: 0.3
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 4
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0001
+    optimizer: adam
+FCN17:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: null
+    filters: 256
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: 0.1
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 8
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0005
+    optimizer: adam
+FCN18:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: 0.2
+    filters: 64
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: null
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 32
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0001
+    optimizer: adam
+FCN19:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: 0.1
+    filters: 128
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: 0.1
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 16
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0005
+    optimizer: adam
+FCN2:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: 0.4
+    filters: 256
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: null
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 8
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.00025
+    optimizer: adam
+FCN20:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: 0.3
+    filters: 256
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: 0.4
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 32
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.00025
+    optimizer: adam
+FCN3:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: null
+    filters: 128
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: 0.1
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 8
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.00025
+    optimizer: adam
+FCN4:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: 0.2
+    filters: 128
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: 0.2
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 4
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0001
+    optimizer: adam
+FCN5:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: 0.2
+    filters: 64
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: 0.1
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 32
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0005
+    optimizer: adam
+FCN6:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: 0.4
+    filters: 256
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: 0.2
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 16
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.00025
+    optimizer: adam
+FCN7:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: 0.2
+    filters: 128
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: null
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 32
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0005
+    optimizer: adam
+FCN8:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: 0.4
+    filters: 128
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: 0.4
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 8
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0005
+    optimizer: adam
+FCN9:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: 0.1
+    filters: 128
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: 0.1
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 4
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0005
+    optimizer: adam
+FCNLS2T1:
+  model_hparams:
+    batch_norm: true
+    dropout: 0.3
+    fcn_depth: 3
+    fcn_filters: 64
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 3
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 256
+    ls2t_order: 3
+    ls2t_recursive: false
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: null
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 32
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0005
+    optimizer: adam
+FCNLS2T10:
+  model_hparams:
+    batch_norm: true
+    dropout: null
+    fcn_depth: 3
+    fcn_filters: 128
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 1
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 256
+    ls2t_order: 2
+    ls2t_recursive: false
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: 0.3
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 4
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.001
+    optimizer: adam
+FCNLS2T11:
+  model_hparams:
+    batch_norm: true
+    dropout: 0.1
+    fcn_depth: 3
+    fcn_filters: 128
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 2
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 256
+    ls2t_order: 3
+    ls2t_recursive: false
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: 0.3
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 16
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0005
+    optimizer: adam
+FCNLS2T12:
+  model_hparams:
+    batch_norm: true
+    dropout: 0.3
+    fcn_depth: 3
+    fcn_filters: 128
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 2
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 256
+    ls2t_order: 4
+    ls2t_recursive: false
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: null
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 8
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0001
+    optimizer: adam
+FCNLS2T13:
+  model_hparams:
+    batch_norm: true
+    dropout: 0.1
+    fcn_depth: 3
+    fcn_filters: 128
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 3
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 256
+    ls2t_order: 2
+    ls2t_recursive: true
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: 0.3
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 32
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.001
+    optimizer: adam
+FCNLS2T14:
+  model_hparams:
+    batch_norm: true
+    dropout: 0.3
+    fcn_depth: 3
+    fcn_filters: 128
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 1
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 256
+    ls2t_order: 2
+    ls2t_recursive: false
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: 0.3
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 16
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.00025
+    optimizer: adam
+FCNLS2T15:
+  model_hparams:
+    batch_norm: true
+    dropout: 0.4
+    fcn_depth: 3
+    fcn_filters: 256
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 1
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 64
+    ls2t_order: 2
+    ls2t_recursive: false
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: 0.4
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 32
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0001
+    optimizer: adam
+FCNLS2T16:
+  model_hparams:
+    batch_norm: true
+    dropout: null
+    fcn_depth: 3
+    fcn_filters: 256
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 1
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 256
+    ls2t_order: 4
+    ls2t_recursive: true
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: 0.4
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 8
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.001
+    optimizer: adam
+FCNLS2T17:
+  model_hparams:
+    batch_norm: true
+    dropout: 0.1
+    fcn_depth: 3
+    fcn_filters: 256
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 2
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 128
+    ls2t_order: 2
+    ls2t_recursive: false
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: 0.2
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 8
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0005
+    optimizer: adam
+FCNLS2T18:
+  model_hparams:
+    batch_norm: true
+    dropout: 0.1
+    fcn_depth: 3
+    fcn_filters: 128
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 2
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 64
+    ls2t_order: 3
+    ls2t_recursive: false
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: 0.1
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 8
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.001
+    optimizer: adam
+FCNLS2T19:
+  model_hparams:
+    batch_norm: true
+    dropout: 0.2
+    fcn_depth: 3
+    fcn_filters: 256
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 3
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 128
+    ls2t_order: 2
+    ls2t_recursive: false
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: 0.3
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 8
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.001
+    optimizer: adam
+FCNLS2T2:
+  model_hparams:
+    batch_norm: true
+    dropout: 0.4
+    fcn_depth: 3
+    fcn_filters: 256
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 2
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 64
+    ls2t_order: 4
+    ls2t_recursive: true
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: 0.2
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 16
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0001
+    optimizer: adam
+FCNLS2T20:
+  model_hparams:
+    batch_norm: true
+    dropout: 0.2
+    fcn_depth: 3
+    fcn_filters: 64
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 1
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 256
+    ls2t_order: 4
+    ls2t_recursive: false
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: 0.1
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 32
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.00025
+    optimizer: adam
+FCNLS2T3:
+  model_hparams:
+    batch_norm: true
+    dropout: 0.1
+    fcn_depth: 3
+    fcn_filters: 256
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 1
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 128
+    ls2t_order: 3
+    ls2t_recursive: false
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: 0.3
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 32
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.00025
+    optimizer: adam
+FCNLS2T4:
+  model_hparams:
+    batch_norm: true
+    dropout: 0.4
+    fcn_depth: 3
+    fcn_filters: 128
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 3
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 256
+    ls2t_order: 3
+    ls2t_recursive: true
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: 0.1
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 16
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0005
+    optimizer: adam
+FCNLS2T5:
+  model_hparams:
+    batch_norm: true
+    dropout: 0.1
+    fcn_depth: 3
+    fcn_filters: 128
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 2
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 128
+    ls2t_order: 4
+    ls2t_recursive: true
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: 0.2
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 8
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0001
+    optimizer: adam
+FCNLS2T6:
+  model_hparams:
+    batch_norm: true
+    dropout: 0.3
+    fcn_depth: 3
+    fcn_filters: 64
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 3
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 256
+    ls2t_order: 3
+    ls2t_recursive: true
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: 0.4
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 32
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0001
+    optimizer: adam
+FCNLS2T7:
+  model_hparams:
+    batch_norm: true
+    dropout: 0.3
+    fcn_depth: 3
+    fcn_filters: 128
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 2
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 256
+    ls2t_order: 2
+    ls2t_recursive: false
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: 0.1
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 16
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0001
+    optimizer: adam
+FCNLS2T8:
+  model_hparams:
+    batch_norm: true
+    dropout: 0.3
+    fcn_depth: 3
+    fcn_filters: 64
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 2
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 128
+    ls2t_order: 2
+    ls2t_recursive: false
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: 0.4
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 8
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0005
+    optimizer: adam
+FCNLS2T9:
+  model_hparams:
+    batch_norm: true
+    dropout: 0.1
+    fcn_depth: 3
+    fcn_filters: 256
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 1
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 128
+    ls2t_order: 3
+    ls2t_recursive: false
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: 0.2
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 16
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_factor: 0.5
+      lr_min: 0.0001
+      lr_patience: 10
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.0001
+    optimizer: adam

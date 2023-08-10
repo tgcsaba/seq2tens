@@ -1,0 +1,70 @@
+FCNLS2T:
+  model_hparams:
+    batch_norm: true
+    dropout: null
+    fcn_depth: 3
+    fcn_filters: 128
+    fcn_kernels:
+    - 8
+    - 5
+    - 3
+    ls2t_depth: 3
+    ls2t_difference: true
+    ls2t_embedding_order: 1
+    ls2t_functionals: 64
+    ls2t_normalization: true
+    ls2t_order: 2
+    ls2t_recursive: true
+    renorm: false
+    residual_fcn: true
+    residual_ls2t: true
+    spatial_dropout: null
+    time_coord: true
+  model_name: FCNLS2T
+  train_hparams:
+    batch_size: 4
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_patience: 10
+      lr_factor: 0.5
+      lr_min: 0.0001
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.001
+    optimizer: adam
+FCN:
+  model_hparams:
+    batch_norm: true
+    depth: 3
+    dropout: null
+    filters: 128
+    kernels:
+    - 8
+    - 5
+    - 3
+    renorm: false
+    residual: false
+    spatial_dropout: null
+    time_coord: false
+  model_name: FCN
+  train_hparams:
+    batch_size: 4
+    callbacks: auto
+    cb_hparams:
+      es_patience: 50
+      lr_patience: 10
+      lr_factor: 0.5
+      lr_min: 0.0001
+      mode: max
+      monitor: val_auprc
+    max_batch_size: null
+    min_batch_size: null
+    num_epochs: 500
+    opt_hparams:
+      learning_rate: 0.001
+    optimizer: adam

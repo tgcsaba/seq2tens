@@ -1,0 +1,48 @@
+{
+  "config_name": "FCNBest",
+  "dataset": {
+    "add_mask": true,
+    "add_static": true,
+    "add_time": true,
+    "add_tmask": true,
+    "dataset_name": "physionet2012",
+    "normalize_data": true,
+    "pad_sequences": true
+  },
+  "model_hparams": {
+    "batch_norm": true,
+    "depth": 3,
+    "dropout": 0.4,
+    "filters": 256,
+    "kernels": [
+      8,
+      5,
+      3
+    ],
+    "renorm": false,
+    "residual": false,
+    "spatial_dropout": 0.3,
+    "time_coord": false
+  },
+  "model_name": "FCN",
+  "seed": 807854452,
+  "train_hparams": {
+    "batch_size": 4,
+    "callbacks": "auto",
+    "cb_hparams": {
+      "es_patience": 50,
+      "lr_factor": 0.5,
+      "lr_min": 0.0001,
+      "lr_patience": 10,
+      "mode": "max",
+      "monitor": "val_auprc"
+    },
+    "max_batch_size": null,
+    "min_batch_size": null,
+    "num_epochs": 500,
+    "opt_hparams": {
+      "learning_rate": 0.0001
+    },
+    "optimizer": "adam"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "artifacts": [],
+  "command": "run",
+  "experiment": {
+    "base_dir": "/home/toth/Documents/S2T/seq2tens/medical",
+    "dependencies": [
+      "keras-nightly==2.5.0.dev2021032900",
+      "numpy==1.21.6",
+      "PyYAML==6.0.1",
+      "sacred==0.8.2",
+      "scikit-learn==0.24.0",
+      "tensorflow-gpu==2.5.0"
+    ],
+    "mainfile": "experiment.py",
+    "name": "medical",
+    "repositories": [
+      {
+        "commit": "d07d5afaa12d22034eaf68bdcd09c1335ea48283",
+        "dirty": false,
+        "url": "https://github.com/tgcsaba/seq2tens"
+      },
+      {
+        "commit": "d07d5afaa12d22034eaf68bdcd09c1335ea48283",
+        "dirty": false,
+        "url": "https://github.com/tgcsaba/seq2tens"
+      }
+    ],
+    "sources": [
+      [
+        "datasets.py",
+        "_sources/datasets_aed555efe974bb8cff79ff7af0c8cf1f.py"
+      ],
+      [
+        "experiment.py",
+        "_sources/experiment_659a53092f0f11d9b0f992d0bd4dcd43.py"
+      ]
+    ]
+  },
+  "heartbeat": "2023-08-10T22:38:42.719019",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) Silver 4314 CPU @ 2.40GHz",
+    "gpus": {
+      "driver_version": "535.86.10",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce RTX 3080 Ti",
+          "persistence_mode": true,
+          "total_memory": 12288
+        },
+        {
+          "model": "NVIDIA GeForce RTX 3080 Ti",
+          "persistence_mode": true,
+          "total_memory": 12288
+        },
+        {
+          "model": "NVIDIA GeForce RTX 3080 Ti",
+          "persistence_mode": true,
+          "total_memory": 12288
+        },
+        {
+          "model": "NVIDIA GeForce RTX 3080 Ti",
+          "persistence_mode": true,
+          "total_memory": 12288
+        }
+      ]
+    },
+    "hostname": "hellion.maths.ox.ac.uk",
+    "os": [
+      "Linux",
+      "Linux-5.15.0-78-generic-x86_64-with-debian-bookworm-sid"
+    ],
+    "python_version": "3.7.16"
+  },
+  "meta": {
+    "command": "run",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2023-08-10T22:27:35.261128",
+  "status": "COMPLETED",
+  "stop_time": "2023-08-10T22:38:42.716441"
+}
