@@ -23,7 +23,7 @@ Note that if GPUs are required, the `tensorflow-gpu` version should be [compatib
 The tsc directory contains the appropriate scripts used to run the time series classification experiments in the paper.
 Steps to reproduce the results:
 - Remove/rename the `benchmarks` and the `tmp` directory, since the run script skips all existing results
-- Optional: Open the file configs.yaml, and change the model configurations as required
+- Optional: Open the file `configs/configs.yaml` file, and change the model configurations as desired
 - Call `python run_experiments.py [GPU_ID]` for running on GPU, or leave GPU_ID empty for CPU
 - Visualize the results and generate the plots using the `results.ipynb` notebook
 
