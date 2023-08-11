@@ -1,7 +1,7 @@
 # Seq2Tens: An efficient representation of sequences by low-rank tensor projections
 This repository contains supplementary code to the paper https://arxiv.org/abs/2006.07027.
 ***
-## Update (2023)
+## Update (August 2023)
 We released a new and updated version of the code, intended to be much more modular and streamlined, and coming with an easy-to-configure experimental pipeline.
 ## Installing
 To get started, you should first clone the repository using git, e.g. with the command
