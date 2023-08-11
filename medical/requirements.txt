@@ -1,0 +1,2 @@
+tensorflow-datasets==2.0.0
+git+https://github.com/ExpectationMax/medical_ts_datasets.git
