@@ -1,7 +1,7 @@
 # Seq2Tens: An efficient representation of sequences by low-rank tensor projections
 This repository contains supplementary code to the paper https://arxiv.org/abs/2006.07027.
 ***
-## Update (2023)
+## Update (August 2023)
 We released a new and updated version of the code, intended to be much more modular and streamlined, and coming with an easy-to-configure experimental pipeline.
 ## Installing
 To get started, you should first clone the repository using git, e.g. with the command
@@ -20,12 +20,21 @@ pip install -r requirements.txt
 Note that if GPUs are required, the `tensorflow-gpu` version should be [compatible with the CUDA installation](https://www.tensorflow.org/install/source#gpu), or [compiled from source](https://www.tensorflow.org/install/source).
 ***
 ## Time series classification experiments
-The tsc directory contains the appropriate scripts used to run the time series classification experiments in the paper.
+The `./tsc` directory contains the appropriate scripts used to run the time series classification experiments in the paper.
 Steps to reproduce the results:
 - Remove/rename the `benchmarks` and the `tmp` directory, since the run script skips all existing results
 - Optional: Open the file `configs/configs.yaml` file, and change the model configurations as desired
 - Call `python run_experiments.py [GPU_ID]` for running on GPU, or leave GPU_ID empty for CPU
 - Visualize the results and generate the plots using the `results.ipynb` notebook
+
+## Medical classification
+The `./medical` directory contains the scripts and code used to run the medical mortality prediction experiments.
+- Investigate the `configs/search_spaces.yaml` and the `configs/configs_default.yaml` files for setting the parameters of the random search (the randomly sampled hyperparameters get inserted into the default configs`
+- Generate new random config files by running the `python gen_random_configs.py` script, which samples 10 hyperparameter settings for each model under `configs/configs_random.yaml`
+- Run the hyperparameter search, i.e. train a model for each sampled configuration using `python run_random_search [GPU_ID]`
+- Select the best configuration for each model given the validation set statistics using `python gen_best_configs.py`
+- Train and evaluate the selected models by calling `python run_evaluations.py [GPU_ID]`
+- Summarize the results using the `results.ipynb` notebook
 
 ## Support
 We encourage the use of this code for applications, and we aim to provide support in as many cases as possible. For further assistance or to tell us about your project, please send an email to
