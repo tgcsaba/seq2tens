@@ -29,6 +29,7 @@ Steps to reproduce the results:
 
 ## Medical classification
 The `./medical` directory contains the scripts and code used to run the medical mortality prediction experiments.
+- Install the additional `requirements.txt` file in the folder using `pip install -r requirements.txt`
 - Investigate the `configs/search_spaces.yaml` and the `configs/configs_default.yaml` files for setting the parameters of the random search (the randomly sampled hyperparameters get inserted into the default configs`
 - Generate new random config files by running the `python gen_random_configs.py` script, which samples 10 hyperparameter settings for each model under `configs/configs_random.yaml`
 - Run the hyperparameter search, i.e. train a model for each sampled configuration using `python run_random_search [GPU_ID]`
